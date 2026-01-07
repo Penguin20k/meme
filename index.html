@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>OK</title>
+<style>
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  background:#000;
+}
+button{
+  width:100%;
+  height:100%;
+  border:0;
+  background:#000;
+  color:#fff;
+  font-size:10vw;
+  font-family:sans-serif;
+}
+</style>
+</head>
+<body>
+<button onclick="go()">НАЖМИ</button>
+
+<audio id=a loop>
+  <source src="sound.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function go(){
+  let a=document.getElementById('a');
+  a.volume=1;
+  a.play();
+  document.body.requestFullscreen?.();
+}
+</script>
+</body>
+</html>
